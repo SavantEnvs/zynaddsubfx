@@ -1,0 +1,9 @@
+project: savantenvs/zynaddsubfx
+target: fuzz_part_xiz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_part_xiz/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_part_xiz
+    libfuzzer: true
+    timeout: 30

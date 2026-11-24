@@ -1,0 +1,9 @@
+project: savantenvs/zynaddsubfx
+target: fuzz_rtosc_message
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rtosc_message/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rtosc_message
+    libfuzzer: true
+    timeout: 30

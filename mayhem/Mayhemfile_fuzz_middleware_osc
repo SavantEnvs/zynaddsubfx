@@ -1,0 +1,9 @@
+project: savantenvs/zynaddsubfx
+target: fuzz_middleware_osc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_middleware_osc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_middleware_osc
+    libfuzzer: true
+    timeout: 30
